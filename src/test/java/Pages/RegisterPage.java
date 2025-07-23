@@ -17,7 +17,6 @@ public class RegisterPage {
     private final By passwordElement = By.cssSelector("input[name='customer.password']");
     private final By confirmPasswordElement = By.cssSelector("input[name='repeatedPassword']");
     private final By registerButtonElement = By.cssSelector("input[value='Register']");
-//    private final By registerButtonElement = By.cssSelector("input[value='Register']");
     ChromeDriver driver = Driver.getDriver();
 
     public void enterFirstName(String firstName){
@@ -67,5 +66,4 @@ public class RegisterPage {
     public void pressRegisterbutton(){
         driver.findElement(registerButtonElement).click();
     }
-
 }
