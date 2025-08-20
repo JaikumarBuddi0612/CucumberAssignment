@@ -5,12 +5,12 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/resources/FeatureFiles/BillPayment.feature"},glue = {"StepDefinitions", "Hooks"},
+@CucumberOptions(features = {"src/test/resources/FeatureFiles/ForgotAccount.feature"},glue = {"StepDefinitions", "Hooks"},
         monochrome = true,
         plugin = {
                 "pretty", "html:target/HtmlReports", "json:target/JsonReports/report.json",
                 "junit:target/junitReports/report.xml"}
 )
-public class BillPaymentRunner {
+public class ForgotInfoRunner {
 
 }

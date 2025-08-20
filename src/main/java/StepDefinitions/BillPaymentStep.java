@@ -9,13 +9,19 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class BillPaymentStep {
-    IndexPage indexPage = new IndexPage();
-    OverViewPage ovrpg = new OverViewPage();
-    BillPaymentPage bpg = new BillPaymentPage();
+    IndexPage indexPage;
+    OverViewPage ovrpg;
+    BillPaymentPage bpg;
+
+    public BillPaymentStep(){
+        indexPage = new IndexPage();
+        ovrpg = new OverViewPage();
+        bpg = new BillPaymentPage();
+    }
 
     @Given("the user is on the Home page")
     public void the_user_is_on_the_home_page() {
-        Driver.getDriver().navigate().to("https://parabank.parasoft.com/parabank/index.htm");
+        System.out.println("Inside the user is on the Home page");
     }
 
     @When("User enters {string} and {string} login the user")

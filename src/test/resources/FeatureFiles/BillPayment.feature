@@ -1,8 +1,8 @@
-Feature: Bill Payment and Print Logs
-
-  Scenario Outline: User performs a bill payment and logs the details
+Feature: Bill Payment
+  Background:
     Given the user is on the Home page
-    When User enters "<userName>" and "<password>" login the user
+    When User enters "jaikumar" and "jaikumar" login the user
+  Scenario Outline: User performs a bill payment and logs the details
     When the user clicks on the Bill Pay link
     Then the user is redirected to the Payment Process page
     When the user enters payee name "<payeeName>"
@@ -17,8 +17,6 @@ Feature: Bill Payment and Print Logs
     And clicks on the Send Payment button
     Then the bill payment is successful
     And the payment logs are printed
-
     Examples:
-      | userName | password | payeeName     | address         | city        | state     | zipcode | phoneNumber | account   | verifyAccount | amount |
-      | jaikumar | jaikumar | ABC Utilities | 123 Main Street | New York    | Telangana | 10001   | 1234567890  | 987654321 | 987654321     | 150.00 |
-      | jaikumar | jaikumar | XYZ Telecom   | 456 Park Ave    | Los Angeles | Telangana | 90001   | 9876543210  | 123456789 | 123456789     | 200.50 |
+      | payeeName     | address         | city        | state     | zipcode | phoneNumber | account   | verifyAccount | amount |
+      | ABC Utilities | 123 Main Street | New York    | Telangana | 10001   | 1234567890  | 987654321 | 987654321     | 150.00 |
